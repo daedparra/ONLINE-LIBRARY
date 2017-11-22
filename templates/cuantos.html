@@ -1,0 +1,32 @@
+<script type="text/javascript">
+       function eliminado()
+		{
+			if(document.userForm.libros.value.length == 0){
+				alert("Falta cuantos libros devolvera");
+				return false;
+			}
+			alert("Se ha eliminado el libro correctamente")
+			return true;
+		}
+   
+
+   </script>
+	
+                <!--TABLA LIBROS-->
+         	<form method="post" action="dev.php?token={TOKEN1}" name="userForm" onsubmit="return eliminado();" >
+		<table widh="60%" border="0" align="center">
+	                <tr>
+				<td align="right" nowrap>
+					<font size="1" face="URW Gothic L"> &iquest;Cu&aacute;ntos libros deseas devolver?:
+				</td>
+				<td>
+					<input type="text" name="libros" size="3" maxlength="3">
+				</td>
+			</tr>
+                        <tr>
+				<td colspan="5" align="right" nowrap>
+					<input type="submit" value="Devolver">
+				</td>
+			</tr>
+		</table> 
+     </form>

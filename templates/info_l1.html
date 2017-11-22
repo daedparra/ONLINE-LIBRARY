@@ -1,0 +1,109 @@
+<!-- info_l1.html
+Este programa nos permite crear la tabla de la informacion del libro que se va a rentar. En caso de que ya se haya rentado se desplegara un caja para poder poner un comentario.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<script language="JavaScript">
+	function rentado(){
+	   alert('Libro rentado');
+	   return true;
+	}
+</script>
+<table border = 1 width="90%">
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Autor
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Tema
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Edici&oacute;n
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Editorial
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Registro
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	N&uacute;mero de Libros
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	N&uacute;mero de P&aacute;ginas
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBRO -->
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{TITULO}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{AUTOR}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{TEMA}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{EDICION}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{EDITORIAL}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_REGISTRO}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO_L}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO_P}
+				</td>
+			</tr>
+<!-- END LIBRO -->
+
+		</table>
+<br><br>
+   <div style="position:absolute; left:160px; top:480px;">
+   <table border = 1 width="100%"> 
+          <tr>
+              <td align="CENTER" width="20%">
+			<font size="0" face="URW Gothic L">Nombre
+	          
+	      </td> 
+              
+
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">Comentario
+	          
+	      </td> 
+        </tr>
+<!-- BEGIN COMENT -->
+         <tr>
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">{NOMBRE_C}
+	          
+	      </td> 
+              
+
+              <td align="CENTER" width="60%">
+			<font size="0" face="URW Gothic L">{COMENTARIO}
+	          
+	      </td> 
+
+        </tr>
+<!-- END COMENT -->
+    </table>
+    </div>       
+     <div style= "position:absolute; left:900px; top:500px;">
+           <form method="post" name="useForm" action="coment1.php?token={TOKEN1}">
+		<textarea name="edicion" rows="5" cols="50" maxlenght="500"> </textarea>		
+		<br><br><input type="submit"  value="Escribir Comentario" />
+	   </form>
+	        
+      </div>
+

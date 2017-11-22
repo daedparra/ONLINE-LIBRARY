@@ -1,0 +1,119 @@
+<!-- mostrar_usuario.html
+Este programa permite al administrador ver todos los usuarios almacenados en la bd.
+Daniela Requejo y David Parra
+3/12/2015
+ --> 
+<html>
+   <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:270px; 
+				font-family:URW Gothic L;
+                                font-size: 135%; 
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav {
+				width:400px; 
+				margin:0 auto; 
+			}
+ 
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#990000;
+				color:#FFFFFF;
+				text-decoration:none;
+				padding:20px 27px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:fixed;
+				min-width:180px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:left;
+			}
+			
+			.nav li ul li ul {
+				right:-10px;
+				top:0px;
+			}
+			
+		</style>
+	
+
+	 <body bgcolor="#dcdcc6">
+		<img src="libros.png" width="1100" height="150">
+
+	<basefont color="#003333" size="7">
+        <font size="0.5" face="URW Gothic L">
+         <ins>
+         <DIV ALIGN=center>
+         <br><h1>Bienvenido administrador</h1><br>
+         <br><br><br>
+         <div id="header">
+
+       
+
+		<ul class="nav">
+			<li><a href="">Libros</a>
+					<ul>
+						<li><a href="agregar_libro.html" target="_self">Agregar Libro</a></li>
+						<li><a href="eliminar_libro.html"target="_self">Eliminar Libro</a></li>
+                                                <li><a href="mostrar_libro.php" target="_self">Mostrar Libros</a></li>
+						<li><a href="buscar_libro.html" target="_self">Buscar Libro</a></li>
+							
+						
+					</ul>
+				</li>
+				<li><a href="">Usuarios</a>
+					<ul>
+						<li><a href="agregar_usuario.html"target="_self">Agregar Usuario</a></li>
+						<li><a href="eliminar_user.html"target="_self">Eliminar Usario</a></li>             
+                                                <li><a href="modificar_usuario.html"target="_self">Modificar Usario</a></li> 
+						<li><a href="mostrar_usuarios.php"target="_self">Mostar Usuario</a></li>
+                                                <li><a href="buscar_user.html" target="_self">Buscar Usuario</a></li>
+					</ul>
+				</li>
+			
+                                <li><a href="">Salir</a>
+					<ul>
+						<li><a href="cambia_perfil.html" target="_self">Cambia tu perfil</a></li>
+						<li><a href="salir.php" target="_self">Salir de la cuenta</a></li>
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+	{CONTENIDO}
+<div style="position:absolute; left:auto; top:770px;">
+			<img src="abajo.png" width="1510" height="50">
+	           <div/>
+
+	</body>
+</html>

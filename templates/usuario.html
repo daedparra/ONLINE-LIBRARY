@@ -1,0 +1,117 @@
+<!-- usuario.html
+Este programa es capaz de mostrar al usuario su pagina de ingreso con sus correspondientes menus. Por otro lado se desplegara su foto y su nombre por default.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:250px; 
+				font-family:URW Gothic L;
+                                font-size: 135%; 
+                               
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav {
+				width:400px; 
+				margin:0 auto; 
+			}
+ 
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#990000;
+				color:#FFFFFF;
+				text-decoration:none;
+				padding:20px 27px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:fixed;
+				min-width:200px;
+                                 z-index:10;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:left;
+			}
+			
+			.nav li ul li ul {
+				right:-10px;
+				top:0px;
+			}
+			
+		</style>
+	
+<title>
+	Pr&eacute;stamo de libros..
+</title>
+ <body bgcolor="#dcdcc6">
+
+            
+	<img src="libros.png" width="1100" height="150">
+	<img src="archivos/{FOTO}" width="150" height="150">
+	<basefont color="#003333" size="7">
+        <font size="0.5" face="URW Gothic L">
+         <ins>
+         <DIV ALIGN=center>
+         <br><h1>Bienvenido usuario, "{NOMBRE}"</h1><br>
+         <br><br><br>
+         <div id="header">
+
+       
+
+		<ul class="nav">
+                       <li><a href="user.php?token={TOKEN}">Home</a>
+                                  
+			</li>
+
+			<li><a href="">Libros</a>
+					<ul>
+						<li><a href="rentar_libro.php?token={TOKEN}" target="_self">Rentar</a></li>
+						<li><a href="devolver_libro.php?token={TOKEN}"target="_self">Devolver</a></li>
+                                                <li><a href="buscar_libro_u.php?token={TOKEN}" target="_self">Buscar</a></li>
+						
+							
+						
+					</ul>
+				</li>
+				
+                                <li><a href="">Salir</a>
+					<ul>
+	                                        <li><a href="cambia_perfil_u.php?token={TOKEN}" target="_self">Cambiar Perfil</a></li>
+						<li><a href="salir.php" target="_self">Salir de la cuenta</a></li>
+						
+					</ul>
+				</li>
+				
+			</ul>
+	<br><br><br><br><br><br><br><br><br><br>
+		</div>
+	{CONTENIDO}
+                   <div style="position:absolute; left:auto; top:770px;">
+			<img src="abajo.png" width="1510" height="50">
+	        <div/>
+	</body>

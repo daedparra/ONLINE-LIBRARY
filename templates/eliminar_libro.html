@@ -1,0 +1,61 @@
+<!-- eliminar_libro.html
+Este programa es capaz de mostrar al administrador su pagina para poder eliminar libros a la base de datos tenieno una serie de cajas de texto en las cuales se tienen que llenar todas para seguir con el proceso. Si esto no se cumple mandara una ventana modal diciendole que le falta agregar o ingresar.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+ <script type="text/javascript">
+       function eliminado()
+		{
+			if(document.userForm.titulo.value.length == 0){
+				alert("Falta el T\u00edtulo");
+				return false;
+			}
+			if(document.userForm.edicion.value.length == 0){
+				alert("Falta la edici\u00f3n");
+				return false;
+			}
+			if(document.userForm.libros.value.length == 0){
+				alert("Falta cu\u00e1ntos libros borrar\u00e1");
+				return false;
+			}
+			alert("Se ha eliminado el libro correctamente")
+			return true;
+		}
+   
+
+   </script>
+	
+                <!--TABLA LIBROS-->
+         	<form method="post" action="eliminar.php?token={TOKEN1}" name="userForm" onsubmit="return eliminado();" >
+		<table widh="60%" border="0" align="center">
+			<tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> T&iacute;tulo del libro:
+				</td>
+				<td>
+					<input type="text" name="titulo" size="30" maxlength="50">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Edici&oacute;n:
+				</td>
+				<td>
+					<input type="text" name="edicion" size="25" maxlength="25">
+				</td>
+			</tr>
+	                <tr>
+				<td align="right" nowrap>
+					<font size="1" face="URW Gothic L"> &iquest;Cu&aacute;ntos libros deseas eliminar?:
+				</td>
+				<td>
+					<input type="text" name="libros" size="10" maxlength="10">
+				</td>
+			</tr>
+                        <tr>
+				<td colspan="5" align="right" nowrap>
+					<input type="submit" value="Eliminar">
+				</td>
+			</tr>
+		</table> 
+     </form>

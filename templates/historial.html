@@ -1,0 +1,93 @@
+<!-- historial.html
+Este programa es capaz de mostrar un historial de todos los usuarios que han rentado ese libro en las cuales se imprimira quien lo rento, fechas y su titulo. 
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+ <div style= "position:absolute; left:800px; top:350px;">
+	<table border = 1 width="90%">
+	
+           <br><h1>Libros Rentados</h1><br>
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Retiro
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Vencimiento
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Libros Rentados
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBRO -->
+
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{TITULO}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_R}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{FECHA_V}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO}
+				</td> 
+			</tr>
+<!-- END LIBRO -->
+
+
+               </table>
+
+  </div>
+
+
+	<div style= "position:absolute; left:100px; top:350px;">
+	<table border = 1 width="90%">
+	
+                             <br><h1>Historial</h1><br>
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Retiro
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Vencimiento
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha entrega
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBROS_R -->
+                                  
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{TITULO}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_R}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{FECHA_V}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_E}
+				</td> 
+           			
+			</tr>
+<!-- END LIBROS_R -->
+               </table>
+
+  </div>
+
+
+	
+	
+ 

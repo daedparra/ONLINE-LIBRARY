@@ -1,0 +1,42 @@
+<!-- buscar_usuario_error.html
+Este programa es capaz de desplegar una caja de texto para ingresar el usuario que se desea buscar,  y en caso de que no encuentre mandara mensaje de error.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+ <script type="text/javascript">
+       function modifica()
+		{
+			if(document.userForm.idusuario.value.length == 0){
+				alert("Falta ingresar el usuario");
+				return false;
+			}
+			
+			
+			return true;
+		    }
+  
+             
+                 }
+   </script>
+	<form method="post" name="userForm" action="buscaru.php?token={TOKEN1}" onsubmit="return modifica();" >
+		<table widh="60%" border="0" align="center">
+			<tr> 
+                        <td align="right">
+					<font size="0" face="URW Gothic L"> Nombre del Usuario:<br>
+			
+				<td>
+					<input type="text" name="busqueda" size="25" maxlength="25">
+				</td>
+                         </tr>
+			
+				
+                         <tr>
+				<td colspan="5" align="right">
+					<input type="submit" value="Buscar">
+				</td>
+			</tr>
+		</table> 
+     </form>
+	<P align="center">
+      		<font size="3" face="URW Gothic L" color="FF0000"> <br>
+		Error de busqueda..

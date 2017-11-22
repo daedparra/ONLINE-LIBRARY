@@ -1,0 +1,71 @@
+<!-- tabla_libro.html
+Este programa muestra los libros disponibles, para asi poderlos rentar.
+Daniela Requejo y David Parra
+3/12/2015
+ --> 	
+	<br><br><table border = 1 width="90%">
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Autor
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Tema
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Edici&oacute;n
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Editorial
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Registro
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	N&uacute;mero de Libros
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	N&uacute;mero de P&aacute;ginas
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBRO -->
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">
+				<a href="info1.php?token={TOKEN1}.{ID}">{TITULO}</a>
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{AUTOR}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{TEMA}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{EDICION}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{EDITORIAL}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_REGISTRO}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO_L}
+				</td>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO_P}
+				</td>
+			</tr>
+<!-- END LIBRO -->
+<!-- BEGIN NO_LIBRO -->
+
+		<font size="+1" color="#FF0000"  face="URW Gothic L">{NO_HAY_LIBROS}<br><br>
+
+<!-- END NO_LIBRO -->
+
+		</table>
+	
+ 

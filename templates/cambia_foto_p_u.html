@@ -1,0 +1,32 @@
+<!-- cambia_foto_p_u.html
+Este programa permitira al usuario de cambiar su foto de perfil y asi volverla a almacenar en la bd.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<script language="JavaScript">
+
+	function verificaForma(form){
+		if((form.userfile.value == "") || (form.userfile.value == " ") || (form.userfile.value == "   ")){
+			alert("Seleccione un archivo");
+			return false;
+		}
+	}
+
+</script>
+
+<form enctype="multipart/form-data" action="foto_p_u.php?token={TOKEN1}" method="post" onSubmit="return verificaForma(this)">
+		<table widh="60%" border="0" align="center">
+
+                      <font size="1" face="URW Gothic L"> Cambio de foto <br><br>
+			<tr>                        
+				
+				<input name="userfile" type="file" /><br>
+				
+                        </tr>     
+                        <tr>
+				<td colspan="5" align="center">
+					<br><input type="submit" value="Modificar">
+				</td>
+			</tr>
+		</table> 
+     </form>

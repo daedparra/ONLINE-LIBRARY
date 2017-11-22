@@ -1,0 +1,60 @@
+<script language="JavaScript">
+	function avisar(){
+		alert('Se le ha avisado al usuario');
+		return true;
+	}
+</script>	
+	<table border = 1 width="90%">
+	
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Retiro
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Vencimiento
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	D&iacute;as faltantes
+				</th><th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Avisar
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBRO -->
+
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{TITULO}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_R}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{FECHA_V}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{DIAS}
+				</td> 
+           			<form method="post" name="userForm" onsubmit="return avisar();">
+				<td align="CENTER" nowrap>
+                                 <input type="submit" value="Avisar">
+				</td> 
+           			</form>
+			</tr>
+<!-- END LIBRO -->
+
+
+<!-- BEGIN NO_LIBRO -->
+
+		<font size="+1" color="#FF0000"  face="URW Gothic L">{NO_HAY_LIBROS}
+
+<!-- END NO_LIBRO -->
+
+		</table>
+
+
+	
+ 

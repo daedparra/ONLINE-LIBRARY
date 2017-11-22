@@ -1,0 +1,148 @@
+<!-- agregar_usuario.html
+Este programa es capaz de mostrar al administrador su pagina para poder agregar usuario a la base de datos teniendo una serie de cajas de texto en las cuales se tienen que llenar todas para seguir con el proceso. Si esto no se cumple mandara una ventana modal diciendole que le falta  ingresar un dato.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<script type="text/javascript">
+       function agregado()
+		{
+			if(document.userForm.nombre.value.length == 0){
+				alert("Falta el Nombre");
+				return false;
+			}
+			
+			if(document.userForm.appaterno.value.length == 0){
+				alert("Falta el Apellido Paterno ");
+				return false;
+			}
+                        if(document.userForm.apmaterno.value.length == 0){
+				alert("Falta el Apellido Materno");
+				return false;
+			}
+                        if(document.userForm.fecha_nacimiento.value.length == 0){
+				alert("Falta la Fecha de nacimiento");
+				return false;
+			}
+			if(document.userForm.numcuenta.value.length == 0){
+				alert("Falta el n\u00fam. cuenta");
+				return false;
+			}
+		        if(document.userForm.contra.value.length == 0){
+				alert("Falta la contraseña");
+				return false;
+			}
+                        if(document.userForm.carrera.value.length == 0){
+				alert("Falta la Carrera");
+				return false;
+			}
+			if(document.userForm.tipo.value.length == 0){
+				alert("Falta el tipo de usuario");
+				return false;
+			}
+                        if(document.userForm.mail.value.length == 0){
+				alert("Falta el e-mail");
+				return false;
+			}
+			alert('Se ha agregado correctamente')
+			return true;
+		}
+   
+
+   </script>
+<form enctype="multipart/form-data" method="post" action="agrega_u.php?token={TOKEN1}" name="userForm" onsubmit="return agregado();" >
+		<table widh="60%" border="0" align="center">
+                      
+                      
+		
+  
+			<tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Nombre:
+				</td>
+				<td>
+					<input type="text" name="nombre" size="30" maxlength="50">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Apellido Paterno:
+				</td>
+				<td>
+					<input type="text" name="appaterno" size="25" maxlength="25">
+				</td>
+			</tr>
+	                <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Apellido Materno:
+				</td>
+				<td>
+					<input type="text" name="apmaterno" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Fecha de nacimiento:
+				</td>
+				<td>
+					<input type="text" name="fecha_nacimiento" size="10" maxlength="10"><font size="0" face="URW Gothic L"> (aaaa-mm-dd)
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> N&uacute;m. Cuenta:
+				</td>
+				<td>
+					<input type="text" name="numcuenta" size="10" maxlength="10">
+				</td>
+			</tr>
+                      	<tr>
+
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Contrase&ntilde;a:
+				</td>
+				<td>
+					<input type="text" name="contra" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Carrera:
+				</td>
+				<td>
+					<input type="text" name="carrera" size="25" maxlength="25">
+				</td>
+			</tr>
+			<tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Tipo Usuario:
+				</td>
+				<td>
+					<input type="text" name="tipo" size="3" maxlength="3"><font size="0" face="URW Gothic L">("1" administrador "2" estudiante)
+				</td>
+			</tr>
+                        <tr>
+
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> E-mail:
+				</td>
+				<td>
+					<input type="text" name="mail" size="30" maxlength="30">
+				</td>
+			</tr>
+			<tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Foto:
+				</td>				
+				<td colspan="5" align="right">					
+					<input name="userfile" type="file" />
+				</td>
+			</tr>
+	
+                        <tr>
+				<td colspan="5" align="right">
+					<br><input type="submit" value="Agregar">
+				</td>
+			</tr>
+		</table> 
+     </form>

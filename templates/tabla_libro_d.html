@@ -1,0 +1,65 @@
+<!-- tabla_libro_d.html
+Este programa mostrara los libros rentados asi podra elegir uno de ellos para devolver uno de ellos o todos.
+Daniela Requejo y David Parra
+3/12/2015
+ --> 
+<script language="JavaScript">
+	function regresado(){
+		alert('Ha sido regresado este libro ');
+		return true;
+	}
+</script>	
+	<table border = 1 width="90%">
+	
+			<tr>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	T&iacute;tulo
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Retiro
+				</th> 
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Fecha Vencimiento
+				</th>
+				<th nowrap>
+				<font size="+0.5" face="URW Gothic L">	Libros Rentados
+				</th><th nowrap>
+				<font size="+0.5" face="URW Gothic L"> 
+				</th>
+			</tr>
+				
+<!-- BEGIN LIBRO -->
+
+			<tr>
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{TITULO}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{FECHA_R}
+				</td>
+				<td align="CENTER" nowrap>
+			        <font size="0" face="URW Gothic L">{FECHA_V}
+				</td> 
+				<td align="CENTER" nowrap>
+				<font size="0" face="URW Gothic L">{NUMERO}
+				</td> 
+           			<form method="post" action="dev_c.php?token={TOKEN1}.{ID}" name="userForm" onsubmit="return regresado();">
+				<td align="CENTER" nowrap>
+                                 <input type="submit" value="Devolver">
+				</td> 
+           			</form>
+			</tr>
+<!-- END LIBRO -->
+
+
+<!-- BEGIN NO_LIBRO -->
+
+<font size="+1" color="#FF0000"  face="URW Gothic L">{NO_HAY_LIBROS}
+
+<!-- END NO_LIBRO -->
+
+		</table>
+
+
+	
+ 

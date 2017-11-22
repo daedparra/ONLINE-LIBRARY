@@ -1,0 +1,66 @@
+<!-- modificar_usuario.html
+Este programa permite al administrador cambiar la informacion del usuario, se podra modificar cualquier ambito solo es necesario escoger una opcion e ingresar su id y asi actualizar su informacion automaticamente.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+
+<script type="text/javascript">
+       function modifica()
+		{
+			if(document.userForm.id.value.length == 0){
+				alert("Falta el id usuario");
+				return false;
+			}
+			
+			if(document.userForm.modifica.value.length == 0){
+				alert("Falta la modificaci\u00f3n");
+				return false;
+			}
+
+	                alert('Se ha modificado correctamente');
+			return true;
+		   }
+  
+  </script>
+	<form method="post" name="userForm" action="modificar_u.php?token={TOKEN1}" onsubmit="return modifica();" >
+		<table widh="60%" border="0" align="center">
+			<tr> 
+                        	<td align="right">
+				<font size="0" face="URW Gothic L"> Ingresa el id. del usuario:<br>
+				</td>
+				<td>
+				<input type="text" name="id" size="3" maxlength="3">
+				</td>
+                         </tr>
+			<font size="0" face="URW Gothic L"> Qu&eacute; deseas modificar?	
+                        <select name="usuario">
+			   <option value="0">Opciones: </option>
+                           <option value="1">Nombre</option> 
+                           <option value="2">Ap. Paterno</option> 
+                           <option value="3">Ap. Materno</option>
+                           <option value="4">Carrera</option> 
+                           <option value="5">Fecha de nacimiento</option> 
+                           <option value="6">E-mail</option>
+                           <option value="7">N&uacute;m. Cuenta</option>
+                           <option value="8">Contrase&ntilde;a</option>
+			   <option value="9">Tipo de usuario</option>						
+                        </select>
+                         <tr>
+		     		<td align="right">
+				<font size="0" face="URW Gothic L"> Modificaci&oacute;n:
+				</td>
+				<td>
+				<input type="text" name="modifica" size="25" maxlength="25">
+				</td>
+			</tr>
+                   <td align="center">
+			    <font size="0" face="URW Gothic L"><a href="cambia_foto.php?token={TOKEN1}" target="_self"> Quieres cambiar la foto haz click aqui
+	          </td>
+	
+                        <tr>
+				<td colspan="5" align="right">
+					<input type="submit" value="Modificar">
+				</td>
+			</tr>
+		</table> 
+     </form>

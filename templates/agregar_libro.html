@@ -1,0 +1,117 @@
+<!-- agregar_libro.html
+Este programa es capaz de mostrar al administrador su pagina para poder agregar libros a la base de datos tenieno una serie de cajas de texto en las cuales se tienen que llenar todas para seguir con el proceso. Si esto no se cumple mandara una ventana modal diciendole que le falta agregar o ingresar.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<script type="text/javascript">
+       function agregado()
+		{
+			if(document.userForm.titulo.value.length == 0){
+				alert("Falta el Titulo");
+				return false;
+			}
+			
+			if(document.userForm.tema.value.length == 0){
+				alert("Falta el Tema");
+				return false;
+			}
+                        if(document.userForm.editorial.value.length == 0){
+				alert("Falta la Editorial");
+				return false;
+			}
+                        if(document.userForm.fecha_libro.value.length == 0){
+				alert("Falta la Fecha de registro");
+				return false;
+			}
+                        if(document.userForm.edicion.value.length == 0){
+				alert("Falta la Edicion");
+				return false;
+			}
+                         if(document.userForm.autor.value.length == 0){
+				alert("Falta el autor");
+				return false;
+			}
+                        if(document.userForm.paginas.value.length == 0){
+				alert("Falta el num. de paginas");
+				return false;
+			}
+			alert('Se ha agregado correctamente')
+			return true;
+		}
+   
+   </script>
+                <!--TABLA LIBROS-->
+         	<form method="post" action="agrega.php?token={TOKEN1}" name="userForm" onsubmit="return agregado();" >
+		<table widh="100%" border="0" align="center">
+			<tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> T&iacute;tulo del libro:
+				</td>
+				<td>
+					<input type="text" name="titulo" size="30" maxlength="50">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Tema:
+				</td>
+				<td>
+					<input type="text" name="tema" size="25" maxlength="25">
+				</td>
+			</tr>
+	                <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Editorial:
+				</td>
+				<td>
+					<input type="text" name="editorial" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Fecha de registro (aaaa-mm-dd):
+				</td>
+				<td>
+					<input type="text" name="fecha_libro" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Edici&oacute;n:
+				</td>
+				<td>
+					<input type="text" name="edicion" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> Autor:
+				</td>
+				<td>
+					<input type="text" name="autor" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> N&uacute;mero de Libros:
+				</td>
+				<td>
+					<input type="text" name="libros" size="25" maxlength="25">
+				</td>
+			</tr>
+                        <tr>
+				<td align="right" nowrap>
+					<font size="0" face="URW Gothic L"> N&uacute;mero de pag.:
+				</td>
+				<td>
+					<input type="text" name="paginas" size="25" maxlength="25">
+				</td>
+			
+	
+                        <tr>
+				<td colspan="5" align="right">
+					<input type="submit" value="Agregar">
+				</td>
+			</tr>
+		</table> 
+     </form>

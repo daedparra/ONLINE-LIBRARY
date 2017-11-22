@@ -1,0 +1,47 @@
+ <script type="text/javascript">
+       function modifica()
+		{
+			if(document.userForm.busqueda.value.length == 0){
+				alert("Falta ingresar");
+				return false;
+			}
+			
+			
+			return true;
+		    }
+  
+   </script>
+<form method="post" action="buscarl.php?token={TOKEN1}" name="userForm" onsubmit="return modifica();" >
+		<table widh="60%" border="0" align="center">
+			<tr> 
+                        <td align="right">
+					<font size="+0.5" face="URW Gothic L"> Ingresa lo que quieras buscar:
+			
+				<td>
+					<input type="text" name="busqueda" size="25" maxlength="25"><br>
+				</td>
+                         </tr>
+			<tr>
+			<td>
+			<br>
+			</td>
+			</tr>
+			<tr> 
+                        <td align="right">
+				<input type="checkbox" name="titulo" value="1"> 
+				<font size="0" face="URW Gothic L">T&iacute;tulo
+				<input type="checkbox" name="autor" value="2">
+				<font size="0" face="URW Gothic L"> Autor
+				<input type="checkbox" name="editorial" value="3"> 
+				<font size="0" face="URW Gothic L">Editorial
+				<input type="checkbox" name="tema" value="4"> 
+				<font size="0" face="URW Gothic L">Tema	
+			</td>
+                         </tr>
+                         <tr>
+				<td colspan="5" align="right">
+					<input type="submit" value="Buscar">
+				</td>
+			</tr>
+		</table> 
+     </form>

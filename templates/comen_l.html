@@ -1,0 +1,52 @@
+<!-- comenl.html
+El administrador y al usuario podran ingresar en una caja de texto un comentario y asi luego mandarsela a la base de datos y luego poderlo imprimir en la pagina de renats y asi que los usuarios lo puedan ver.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+<div style="position:absolute; left:160px; top:480px;">
+   <table border = 1 width="100%"> 
+          <tr>
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">Nombre
+	          
+	      </td> 
+              
+
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">Coment&aacute;rio
+	          
+	      </td> 
+        <tr>
+         <tr>
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">{NOMBRE_C}
+	          
+	      </td> 
+              
+
+              <td align="CENTER" nowrap>
+			<font size="0" face="URW Gothic L">{COMENTARIO}
+	          
+	      </td> 
+        <tr>
+    </table>
+    </div>       
+
+     <div style= "position:absolute; left:1000px; top:500px;">
+
+
+           <form method="get" action="coment.php?token={TOKEN1}">
+		<input type="submit"  value="Escribir Comentario" />
+	          
+	     
+      </div>
+
+      <div style="position:absolute; left:1000px; top:530px;">
+
+
+           <form method="get" action="rentar_l.php?token={TOKEN1}">
+		<input type="submit" value="Rentar Libro" />
+	          
+	     
+      </div>
+
