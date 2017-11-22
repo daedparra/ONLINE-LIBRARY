@@ -1,0 +1,82 @@
+<!-- principal_error.html
+Este programa mostrara un mensaje de erro si los datos no coinciden o son incorrectos.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+
+<html>
+	<script type="text/javascript">
+	<!--
+		function thesame(value1, value2)
+		{
+			if((value1 != "") && ((value2 != "") && (value1 != value2))){
+				alert("El password y la confirmacion deben ser iguales");
+				document.userForm.formPassword1.value="";
+				document.userForm.formPassword2.value="";
+				return false;
+			}
+			return true;
+		}
+		
+		function verifica()
+		{
+			if(document.userForm.userName.value.length == 0){
+				alert("Falta el num. cuenta");
+				return false;
+			}
+			
+			if(document.userForm.formPassword1.value.length == 0){
+				alert("Falta el password");
+				return false;
+			}
+			return true;
+		}
+	// -->
+	</script>
+	<title>
+	Pr&eacute;stamo de libros..
+	</title>
+	<body bgcolor="#dcdcc6">
+			<img src="libros.png" width="1100" height="150">
+		<br>	
+		<br>
+		<br>
+		<form method="post" action="usuario.php" name="userForm" onsubmit="return verifica();">
+		<table widh="60%" border="0" align="center">
+			<tr>
+				<td align="right">
+					<font size="+1" face="URW Gothic L"> Num. Cuenta:
+				</td>
+				<td>
+					<input type="text" name="userName" size="25" maxlength="25">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<font size="+1" face="URW Gothic L"> Contrase&ntilde;a:
+				</td>
+				<td>
+					<input type="password" name="formPassword1" size="10" onchange="thesame(document.userForm.formPassword1.value,document.userForm.formPassword2.value);">
+				</td>
+			</tr>
+			<td align="right">
+					<font size="0" face="URW Gothic L"> <br> 
+					<a href="recupera.html" target="_blank">Recuperar contrase&ntilde;a</a>
+				</td>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="Ingresar">
+				</td>
+			</tr>
+		</table> 
+		</form>
+		<P align="center">
+      		<font size="3" face="URW Gothic L" color="FF0000"> <br>
+		N&uacute;mero de Cuenta o Contrase&ntilde;a incorrectos.
+ 		<div style="position:absolute; left:auto; top:675px;">
+	           &nbsp;&nbsp;<a href="https://www.facebook.com/Prestamo-de-libros-1679870762291409/" target="_blank"> <img src="facebook.png " width="120" height="80"></a>
+			<img src="abajo.png" width="1510" height="50">
+	        <div/>
+	</body>
+
+</html>

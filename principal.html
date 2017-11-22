@@ -1,0 +1,185 @@
+<!-- principal.html
+Este programa muestra la pagina principal, en la cual podras ingresar si ya eres parte de la pagina web, de lo contrario habra una parte de registro para ser nuevo en la pagina.
+David Parra y Daniela Requejo
+3/12/2015
+ --> 
+
+<html>
+	<script type="text/javascript">
+		
+		function verifica()
+		{
+			if(document.userForm.userName.value.length == 0){
+				alert("Falta el n\u00fam. cuenta");
+				return false;
+			}
+			
+			if(document.userForm.formPassword1.value.length == 0){
+				alert("Falta el password");
+				return false;
+			}
+			return true;
+                }
+                function registra()
+		{
+			if(document.userForm1.nombre.value.length == 0){
+				alert("Falta el Nombre");
+				return false;
+			}
+			
+			if(document.userForm1.appaterno.value.length == 0){
+				alert("Falta el Apellido Paterno ");
+				return false;
+			}
+                        if(document.userForm1.apmaterno.value.length == 0){
+				alert("Falta el Apellido Materno");
+				return false;
+			}
+                        if(document.userForm1.fecha_nacimiento.value.length == 0){
+				alert("Falta la Fecha de nacimiento");
+				return false;
+			}
+                         if(document.userForm1.numcuenta.value.length == 0){
+				alert("Falta el n\u00fam. cuenta");
+				return false;
+			}
+			if(document.userForm1.numcuenta.value.length == 0){
+				alert("Falta el n\u00fam. cuenta");
+				return false;
+			}
+			 if(document.userForm1.carrera.value.length == 0){
+				alert("Falta la Carrera");
+				return false;
+			}
+                        if(document.userForm1.mail.value.length == 0){
+				alert("Falta el e-mail");
+				return false;
+			}
+			alert('Se ha agregado correctamente')
+			return true;
+   
+		}
+	// -->
+	</script>
+	<title>
+	Pr&eacute;stamo de libros..
+	</title>
+	<body bgcolor="#dcdcc6">
+		<img src="libros.png" width="1100" height="150">
+		<br>	
+		<br>
+		<br>
+		<form method="post" action="usuario.php" name="userForm" onsubmit="return verifica();">
+		<table widh="60%" border="0" align="center" >
+			<tr>
+				<td align="right">
+					<font size="+1" face="URW Gothic L"> N&uacute;m. Cuenta:
+				</td>
+				<td>
+					<input type="text" name="userName" size="25" maxlength="25">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<font size="+1" face="URW Gothic L"> Contrase&ntilde;a:
+				</td>
+				<td>
+					<input type="password" name="formPassword1" size="10" onchange="thesame(document.userForm.formPassword1.value,document.userForm.formPassword2.value);">
+				</td>
+			</tr>
+			<td align="right">
+				<font size="0" face="URW Gothic L"> <br> 
+				<a href="recupera.html" target="_blank">Recuperar contrase&ntilde;a</a>
+			</td>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="Ingresar">
+				</td>
+			</tr>
+		</table> 
+		</form>
+
+                <form method="post" action="registra.php" name="userForm1" onsubmit="return registra();">
+			<table width="30%" border="0" align="center" ORDER BGCOLOR="#992300" style="position:absolute;top:400px;left:550px;">         
+            			<tr>
+               				<td align="center">
+               				<font size="+0.5" face="URW Gothic L"> &iquest;Eres nuevo en Pr&eacute;stamo de Libros? Reg&iacute;strate
+                			</td>
+	   			</tr>
+                           	<tr>
+					<td align="right">
+						<font size="0"color='#ffffff' face="URW Gothic L"> Nombre:
+					</td>
+					<td>
+						<input type="text" name="nombre" size="30" maxlength="50">
+					</td>
+				</tr>
+                        	<tr>
+					<td align="right">
+						<font size="0"color='#ffffff' face="URW Gothic L"> Apellido Paterno:
+					</td>
+					<td>
+						<input type="text"  name="appaterno" size="25" maxlength="25">
+					</td>
+				</tr>
+	               		<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> Apellido Materno:
+					</td>
+					<td>
+						<input type="text" name="apmaterno" size="25" maxlength="25">
+					</td>	
+				</tr>
+                        	<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> Fecha de nacimiento (aaaa-mm-dd):
+					</td>
+					<td>
+						<input type="text" name="fecha_nacimiento" size="10" maxlength="10">
+					</td>	
+				</tr>
+                        	<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> N&uacute;m. Cuenta:
+					</td>
+					<td>
+						<input type="text" name="numcuenta" size="15" maxlength="15">
+					</td>
+				</tr>
+                        	<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> Contrase&ntilde;a:
+					</td>
+					<td>
+						<input type="text" name="contra" size="25" maxlength="25">
+					</td>
+				</tr>
+                        	<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> Carrera:
+					</td>
+					<td>
+						<input type="text" name="carrera" size="25" maxlength="25">
+					</td>
+				</tr>
+                       		<tr>
+					<td align="right">
+						<font size="0" color='#ffffff' face="URW Gothic L"> E-mail:
+					</td>
+					<td>
+						<input type="text" name="mail" size="25" maxlength="25">
+					</td>
+                        	<tr>
+					<td colspan="5" align="right">
+						<input type="submit" value="Reg&iacute;strate Ahora">
+					</td>
+				</tr>
+			</table> 
+                </form>  
+		<div style="position:absolute; left:auto; top:675px;">
+	           &nbsp;&nbsp;<a href="https://www.facebook.com/Prestamo-de-libros-1679870762291409/" target="_blank"> <img src="facebook.png " width="130" height="80"></a>
+			<img src="abajo.png" width="1510" height="50">
+	        <div/>
+	</body>
+
+</html>
